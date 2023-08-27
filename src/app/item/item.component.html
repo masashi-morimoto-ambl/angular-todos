@@ -1,0 +1,36 @@
+<div class="item">
+  <input
+    [id]="item.description"
+    type="checkbox"
+    (change)="item.done = !item.done"
+    [checked]="item.done"
+  />
+  <label [for]="item.description">{{ item.description }}</label>
+
+  <div class="btn-wrapper" *ngIf="!editable">
+    <button mat-stroked-button (click)="editable = !editable">Edit</button>
+    <button mat-flat-button color="warn" (click)="remove.emit()">Delete</button>
+  </div>
+
+  <div *ngIf="editable">
+    <mat-form-field style="width: 100%; margin-top: 20px">
+      <input
+        #editedItem
+        matInput
+        [value]="item.description"
+        (keyup.enter)="saveItem(editedItem.value)"
+      />
+    </mat-form-field>
+
+    <div class="btn-wrapper">
+      <button mat-flat-button (click)="editable = !editable">Cancel</button>
+      <button
+        mat-flat-button
+        color="accent"
+        (click)="saveItem(editedItem.value)"
+      >
+        Save
+      </button>
+    </div>
+  </div>
+</div>
