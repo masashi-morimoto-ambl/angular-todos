@@ -1,8 +1,8 @@
 # Angular 学習用 TODO アプリ
 
-参考：[Angular をはじめる](https://developer.mozilla.org/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+TODO アプリ学習参考：[Angular をはじめる](https://developer.mozilla.org/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
 
-## バージョン
+## Angular CLI バージョン
 
 16.1.7.
 
